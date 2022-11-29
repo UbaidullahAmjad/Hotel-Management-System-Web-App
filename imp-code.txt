@@ -1,0 +1,57 @@
+<div class="col-lg-8 card mt-5" style="margin-top: 35px;"><!-- Explore Rooms -->
+					<table>
+						<thead>
+						<tr class="products-title">
+							<td class="table-products-image pos-center"><h6>IMAGE</h6></td>
+							<td class="table-products-name pos-center"><h6>ROOM NAME</h6></td>
+							@if($result['country_code'] == "UAE")
+							<td class="table-products-total pos-center"><h6>PRICE (TND)</h6></td>
+							@else
+							<td class="table-products-total pos-center"><h6>PRICE (€)</h6></td>
+							@endif
+							
+						</tr>
+						</thead>
+						@foreach($rooms as $room)
+
+						<tbody>
+						<tr class="table-products-list pos-center">
+							<td class="products-image-table"><img style="border-radius: 10px;" alt="Products Image 1" src="temp/room-image-1.jpg" class="img-responsive"></td>
+							<td class="title-table">
+								<div class="room-details-list clearfix">
+									<div class="pull-left">
+										<h5>Room#: {{ $room->room_no }}</h5>
+									</div>
+
+								</div>
+
+								<p>{{ $room->description }}<a class="active-color" href="#">[...]</a> </p>
+							</td>
+							@if($result['country_code'] == "UAE")
+							<td><h3>{{ $room->price2}} TND</h3></td>
+							@else
+							<td><h3>{{ $room->price2}} €</h3></td>
+							@endif
+
+							
+
+						</tr>
+					
+
+
+
+
+
+						<tr id="row<?php echo $room->id;?>" style="border-bottom:1px solid;display:none;" class="table-products-list pos-center ">
+
+
+						</tr>
+						</tbody>
+
+								@endforeach
+						
+
+					</table>
+				</div>
+
+=================================================
