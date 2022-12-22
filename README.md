@@ -26,7 +26,7 @@ Hotel
 - Laptop
 - Desktop
 
-# WhatI Delivered:
+# What I Delivered:
 The deliverable of this project includes a complete smart automated platform that meets all the business logic of stakeholders.
 ## Administrative control App:
 This is the super admin module app that manages all the functionalities of the website in an effective way. Super admin can perform the following functionalities
